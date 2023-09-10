@@ -1,3 +1,11 @@
+/*
+Author Name=Onkar Anant Lambade
+Date = 6/8/2023
+Branch = I.T.
+Roll No=32
+Program =15
+Description=PROGRAM TO IMPLEMEMT INSERT,DELETE,DISPLAY,SEARCH IN LINKED LIST.
+*/
 #include <stdio.h>
 #include <stdlib.h>
 
