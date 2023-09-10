@@ -1,3 +1,11 @@
+/*
+Author Name=Onkar Anant Lambade
+Date = 6/8/2023
+Branch = I.T.
+Roll No=32
+Program =11
+Description=ARRAY IMPLEMENTATION OF STACK
+*/
 #include <stdio.h>
 #include<stdlib.h> 	// exit
 #define MAX_SIZE 10 	// size of array 10
