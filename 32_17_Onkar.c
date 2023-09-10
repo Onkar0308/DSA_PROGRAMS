@@ -1,3 +1,11 @@
+/*
+Author Name=Onkar Anant Lambade
+Date = 6/8/2023
+Branch = I.T.
+Roll No=32
+Program =17
+Description=LINKED LIST IMPLEMENTATION OF QUEUE.
+*/
 #include <stdio.h>
 #include <stdlib.h>
 
