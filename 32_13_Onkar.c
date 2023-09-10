@@ -1,3 +1,11 @@
+/*
+Author Name=Onkar Anant Lambade
+Date = 6/8/2023
+Branch = I.T.
+Roll No=32
+Program =13
+Description=ARRAY IMPLEMENTATION OF CIRCULAR QUEUE.
+*/
 #include<stdio.h>
 #include<stdlib.h>
 
