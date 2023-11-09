@@ -2,66 +2,41 @@
 Date = 8/10/2023
 Branch = I.T.
 Roll No=32
-Program =24
-Description=Write a program in C to implement Quick Sort 
+Program =25
+Description=Write a program in C to Implementation of Binary Search.
 */
-#include<stdio.h>
+#include <stdio.h>
 
-void swap(int *a,int *b){
-    int temp=*a;
-    *a=*b;
-    *b=temp;
-}
+int binary_search(int arr[], int size, int target) {
+    int left = 0;
+    int right = size - 1;
 
-void qsort(int a[], int l, int h) {
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
 
-    if (l < h) {
-        
-        int target = a[l]; // Choose the 1st element as the target
-        int i = l;  
-
-        for (int j = l + 1; j <= h; j++) {
-            
-            // If Target is greater than current element
-            if (target >= a[j]) {
-                
-                i++;                // Increment index of the smaller element
-                swap(&a[i], &a[j]); // Swap a[i] and a[j]
-            }
+        if (arr[mid] == target) {
+            return mid;  // Element found, return its index
+        } else if (arr[mid] < target) {
+            left = mid + 1;  // Adjust the left boundary
+        } else {
+            right = mid - 1;  // Adjust the right boundary
         }
-
-        swap(&a[i], &a[l]);
-
-        // Recursively sort elements
-        qsort(a, l, i - 1);
-        qsort(a, i + 1, h);
     }
+
+    return -1;  // Element not found
 }
 
-int main(){
+int main() {
+    int arr[] = {2, 4, 6, 8, 10, 12, 14, 16};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    int target = 10;
 
-    int n;
-    printf("\n Enter the numbers to be sorted :");
-    scanf("%d",&n);
-    int a[n];
-
-    printf("\n Enter Numbers one by one : \n");
-    for(int i=0;i<n;i++){
-        scanf("%d",&a[i]);
+    int result = binary_search(arr, size, target);
+    if (result != -1) {
+        printf("Element %d found at index %d\n", target, result);
+    } else {
+        printf("Element %d not found in the array\n", target);
     }
-    printf("\n Before Sorting : \n");
-    for(int i=0;i<n;i++){
-        printf("%d ",a[i]);
-    }
-    
-    // -------------- Sorting Starts ----------------
 
-    qsort(a,0,n-1);
-
-    // -------------- Sorting Ends ------------------
-    printf("\n After Sorting : \n");
-    for(int i=0;i<n;i++){
-        printf("%d ",a[i]);
-    }
-   return 0; 
+    return 0;
 }
